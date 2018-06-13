@@ -16,7 +16,7 @@ public class LocatorView extends View {//自定义LocatorView空间，继承View
     public float bitmapY;
     public LocatorView(Context context){//重写构造方法，初始化Locator的位置坐标；
         super(context);
-        bitmapX=950;
+        bitmapX=900;
         bitmapY=0;
     }
 
@@ -24,7 +24,7 @@ public class LocatorView extends View {//自定义LocatorView空间，继承View
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         Paint paint=new Paint();//创建并实例化Paint的对象；
-        Bitmap bitmap= BitmapFactory.decodeResource(this.getResources(),R.drawable.locator);//根据图片生成位图对象
+        Bitmap bitmap= BitmapFactory.decodeResource(this.getResources(),R.drawable.start);//根据图片生成位图对象
         canvas.drawBitmap(bitmap,bitmapX,bitmapY,paint);//绘制Locator；
         if(bitmap.isRecycled()){//判断图片是否回收，没回收强制回收图片；
             bitmap.recycle();

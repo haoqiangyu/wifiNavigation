@@ -16,7 +16,7 @@ public class DestinationView extends View {
     public  float bitmapDesY;
     public DestinationView(Context context){
         super(context);
-        bitmapDesX=850;
+        bitmapDesX=900;
         bitmapDesY=900;
     }
 
@@ -24,7 +24,7 @@ public class DestinationView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         Paint paint=new Paint();
-        Bitmap bitmap= BitmapFactory.decodeResource(this.getResources(),R.drawable.destination);
+        Bitmap bitmap= BitmapFactory.decodeResource(this.getResources(),R.drawable.end);
         canvas.drawBitmap(bitmap,bitmapDesX,bitmapDesY,paint);
         if(bitmap.isRecycled()){
             bitmap.recycle();
